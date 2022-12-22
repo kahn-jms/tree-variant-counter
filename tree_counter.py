@@ -59,10 +59,6 @@ while len(node_variants) < len(node_dict):
         if not [child for children in node_counts[node] for child in children if not isinstance(child, int)]:
                 node_variants[node] = sum([reduce(mul, children, 1) for children in node_counts[node]])
 
+# ### Print results
+
 node_variants, node_counts, max(node_variants.values())
-
-a = [2,2]
-
-sum(a)
-
-reduce(mul, a, 1)
